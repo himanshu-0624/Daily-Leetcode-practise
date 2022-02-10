@@ -20,20 +20,20 @@ class Solution {
         
         int d = 0;
         sum=0;
-        int m = Integer.MIN_VALUE;
+        int m = Integer.MAX_VALUE;
         for(int j = 0; j<n; j++)
         {
             d+=(nums[j]);
-            nums[j]*=-1;
+            // nums[j]*=-1;
             sum+=nums[j];
-            m = Math.max(sum,m);
-            if(sum<0)
+            m = Math.min(sum,m);
+            if(sum>0)
             {
                sum=0;
                 
             }
         }
-        return Math.max(max,d+m);
+        return Math.max(max,d-m);
         
     }
 }
