@@ -54,6 +54,6 @@ class Solution {
             max = Math.max(dp[n][i],max);
         }
         
-        return max;
+        return dp[n][k];
     }
 }
