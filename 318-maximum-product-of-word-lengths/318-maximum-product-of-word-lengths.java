@@ -21,7 +21,7 @@ class Solution {
             {
                 int v2 = words[j].length();
                 
-                if((val[i]|val[j]) == (val[i]^val[j]))
+                if((val[i]&val[j]) == 0)
                 {
                   ans = Math.max(ans,v1*v2);   
                 }
